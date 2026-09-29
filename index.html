@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogo da Velha — MVC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <p class="eyebrow">Engenharia de Software · MVC</p>
+      <h1>Jogo da Velha</h1>
+      <p class="subtitle">Uma partida local, acessível e sem dependências externas.</p>
+    </header>
+
+    <section class="game-card" aria-labelledby="game-title">
+      <h2 id="game-title">Partida atual</h2>
+      <div class="scoreboard" aria-label="Placar da sessão">
+        <div class="score score-x"><span>Vitórias X</span><strong id="score-x">0</strong></div>
+        <div class="score score-draw"><span>Empates</span><strong id="score-draw">0</strong></div>
+        <div class="score score-o"><span>Vitórias O</span><strong id="score-o">0</strong></div>
+      </div>
+
+      <p id="game-status" class="status" role="status" aria-live="polite">Vez do Jogador X</p>
+
+      <div id="board" class="board" role="grid" aria-label="Tabuleiro do jogo da velha"></div>
+
+      <div class="controls" aria-label="Controles da partida">
+        <button id="new-game" class="button button-primary" type="button">Nova partida</button>
+        <button id="reset-score" class="button button-danger" type="button">Zerar placar</button>
+      </div>
+
+      <section id="replay-panel" class="replay-panel" aria-labelledby="replay-title" hidden>
+        <h3 id="replay-title">Máquina do tempo</h3>
+        <p id="replay-status">Revise a partida finalizada.</p>
+        <div class="replay-controls">
+          <button id="previous-move" class="button" type="button">Jogada anterior</button>
+          <button id="next-move" class="button" type="button">Próxima jogada</button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
